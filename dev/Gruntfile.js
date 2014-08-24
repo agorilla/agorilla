@@ -2,6 +2,7 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 
+		// Libsass
 		sass: {
 			dist: {
 				files: {
@@ -10,6 +11,7 @@ module.exports = function (grunt) {
 			}
 		},
 
+		// CSS vendor prefixes
 		autoprefixer: {
 			build: {
 				src: '../dist/css/style.css',
@@ -19,6 +21,28 @@ module.exports = function (grunt) {
 				// available options:
 				// https://github.com/nDmitry/grunt-autoprefixer#options
 				browsers: [ '> 1%', 'last 2 versions' ]
+			}
+		},
+
+		// SVG minify
+		svgmin: {
+			options: {
+				plugins: [
+					{ removeViewBox: false },
+					{ removeUselessStrokeAndFill: true },
+					{ cleanupIDs: false }
+				]
+			},
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: 'img',
+						src: ['**/*.svg'],
+						dest: '../dist/img/',
+						ext: '.svg'
+					}
+				]
 			}
 		}
 
@@ -31,7 +55,8 @@ module.exports = function (grunt) {
 	// ORDER IS IMPORTANT
 	grunt.registerTask('default', [
 		'sass',
-		'autoprefixer'
+		'autoprefixer',
+		'svgmin'
 	]);
 
 };
