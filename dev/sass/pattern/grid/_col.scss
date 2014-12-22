@@ -1,0 +1,23 @@
+// Grid column pattern
+
+// Base grid col settings
+.grid-col {
+	display: inline;
+	float: left;
+
+	// Column width value including padding
+	box-sizing: border-box;
+
+	// Default grid gutter (desktop)
+	padding-right: $gridGutterLarge;
+
+	// Medium grid gutter (tablet)
+	@include breakpoint(medium) {
+		padding-right: $gridGutterMedium;
+	}
+
+	// Small grid gutter (mobile)
+	@include breakpoint(small) {
+		padding-right: $gridGutterSmall;
+	}
+}

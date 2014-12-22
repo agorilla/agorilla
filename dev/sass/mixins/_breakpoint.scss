@@ -1,0 +1,33 @@
+// Responsive media query breakpoint mixin
+//
+// Usage:
+// @include breakpoint(large) { color: yellow; background: green; }
+// @include breakpoint(medium) { color: white; background: blue; }
+// @include breakpoint(small) { color: red; background: yellow; }
+// @include breakpoint(1024px, min-width) { color: black; background: white; }
+
+@mixin breakpoint($size, $selector: max-width) {
+	@if $size == large {
+		// Large site (desktop)
+		@media (min-width: $siteMediumBreakpoint + 1) {
+			@content;
+		}
+	} @else if $size == medium {
+		// Medium site (tablet)
+		@media (min-width: $siteSmallBreakpoint + 1) and (max-width: $siteMediumBreakpoint) {
+			@content;
+		}
+	} @else if $size == small {
+		// Small site (mobile)
+		@media (max-width: $siteSmallBreakpoint) {
+			@content;
+		}
+	} @else {
+		// Free style media query
+		// $selector: min-width, max-width (default)
+		// $size: 1024px, 45em, 100%
+		@media ($selector: $size) {
+			@content;
+		}
+	}
+}

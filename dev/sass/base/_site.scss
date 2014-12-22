@@ -1,0 +1,24 @@
+// Site styles
+
+body {
+	// Base text color
+	color: $colorWhite;
+
+	// Base background color
+	background-color: $colorDark;
+}
+
+// Full site container
+.site {
+	position: relative;
+    min-width: $siteMinWidth;
+    max-width: $siteMaxWidth;
+    min-height: 100%;
+    margin: 0 auto;
+
+	// Hide overflow if screen size is smaller than maximum site width
+	// Only for large desktop screens the visble overflow is useful
+	@include breakpoint($siteMaxWidth) {
+		overflow-x: hidden;
+	}
+}

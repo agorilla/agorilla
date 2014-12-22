@@ -1,0 +1,11 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+// https://github.com/zurb/foundation/blob/master/scss/foundation/components/_grid.scss
+
+// @FUNCTION
+// $colNumber - Found in settings file
+// $totalColumns - Found in settings file
+@function grid-calc($colNumber, $totalColumns) {
+  @return percentage(($colNumber / $totalColumns));
+}

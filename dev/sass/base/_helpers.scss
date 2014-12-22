@@ -1,0 +1,74 @@
+// Helper styles
+
+// Block style
+.block {
+    display: block;
+}
+
+// Inline style
+.inline {
+    display: inline;
+}
+
+// Inline block
+.inline-block {
+    display: inline-block;
+}
+
+// Position relative
+.relative {
+    position: relative;
+}
+
+// Float left
+.left {
+    float: left;
+}
+
+// Float right
+.right {
+    float: right;
+}
+
+// No white space wrap (line break)
+.nowrap {
+    white-space: nowrap;
+}
+
+// Hidden style
+.hidden {
+	display: none;
+}
+
+// Reset hidden style elements
+.visible {
+    display: block;
+}
+
+// Disabled element (semi transparent)
+.disabled, :disabled {
+	opacity: 0.5;
+}
+
+// Hidden text
+.hidden-text {
+	font-size: 0;
+	line-height: 0;
+	text-shadow: none;
+}
+
+// Remove unwanted user text selection (e.g. on click)
+// http://stackoverflow.com/questions/13708908/how-to-prevent-selecting-text-on-double-click
+.no-userselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// Remove unwanted focus outline
+// http://tjvantoll.com/2013/01/28/stop-messing-with-the-browsers-default-focus-outline/
+.no-outline {
+    outline: 0;
+}

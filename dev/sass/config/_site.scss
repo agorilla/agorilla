@@ -1,0 +1,20 @@
+// Site configuration
+
+// Site width
+$siteMaxWidth: 1280px;
+$siteMinWidth: 320px;
+
+// Large site (desktop, default)
+$siteLargeBreakpoint: $siteMaxWidth;
+$siteLargeSpaceOuter: 68px;
+$siteLargeSpaceInner: 30px;
+
+// Medium site (medium)
+$siteMediumBreakpoint: 800px;
+$siteMediumSpaceOuter: 50px;
+$siteMediumSpaceInner: 20px;
+
+// Small site (mobile
+$siteSmallBreakpoint: 420px;
+$siteSmallSpaceOuter: 0;
+$siteSmallSpaceInner: 20px;

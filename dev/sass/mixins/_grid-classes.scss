@@ -1,0 +1,31 @@
+// Grid column classes mixin
+// Generates grid column CSS classes based on responsive size (s = small, m = medium, l = large)
+//
+// Usage:
+// @include grid-classes(l);
+// @include grid-classes(m);
+// @include grid-classes(s);
+// @include grid-classes(s, 12);
+
+@mixin grid-classes($size, $columns: $gridColumns) {
+    @for $amount from 1 to $columns + 1 {
+
+		// Grid classes for flexible columns and equal row columns
+        .grid-col-#{$size}#{$amount},
+        .grid-row-#{$size}#{$amount} .grid-col {
+			// Grid column width
+			@include grid-width($amount, $columns);
+        }
+
+        $rowAmount: floor($columns / $amount);
+
+        .grid-row-#{$size}#{$amount} {
+            .grid-col {
+                &:nth-child(#{$rowAmount}n + #{$rowAmount + 1}) {
+                    clear: both;
+                }
+            }
+        }
+
+    }
+}
