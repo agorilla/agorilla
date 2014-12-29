@@ -8,6 +8,10 @@
     margin: 0 auto;
 	box-sizing: border-box;
 
+	// Horizontal site space
+	// based on $siteSpaces for each breakpoint ($siteBreakpoints)
+	@include site-space();
+
 	// Hide overflow if screen size is smaller than maximum site width
 	overflow-x: hidden;
 
