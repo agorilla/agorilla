@@ -3,7 +3,6 @@
 My personal website
 
 ## Currently in development
-- Grid
 
 ## Done
 
@@ -15,6 +14,7 @@ My personal website
 - HTML5 Boilerplate integration
 - improved dist workflow
 - HTML minify
+- Grid
 
 ## Open
 
