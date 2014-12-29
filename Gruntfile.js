@@ -26,7 +26,8 @@ module.exports = function (grunt) {
 					'dev/sass/import/mixins.scss': 'dev/sass/mixins/**/*.scss',
 					'dev/sass/import/base.scss': 'dev/sass/base/**/*.scss',
 					'dev/sass/import/pattern.scss': 'dev/sass/pattern/**/*.scss',
-					'dev/sass/import/modules.scss': 'dev/sass/modules/**/*.scss'
+					'dev/sass/import/modules.scss': 'dev/sass/modules/**/*.scss',
+					'dev/sass/import/site.scss': 'dev/sass/site/**/*.scss'
 				}
 			}
 		},

@@ -1,0 +1,13 @@
+// Grid gutter helper function
+
+@function grid-gutter(
+	$key, // Gutter map key (example: small)
+	$gutters: $grid-gutters // Gutters variable (default: $grid-gutters)
+) {
+	@if map-has-key($gutters, $key) {
+		@return map-get($gutters, $key);
+	}
+
+	@warn "Unknown `#{$key}` in $grid-gutters";
+	@return null;
+}

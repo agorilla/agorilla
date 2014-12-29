@@ -1,0 +1,9 @@
+// Site inner styles
+
+.site-inner {
+	position: relative;
+
+	// Site inner space
+	// based on $siteSpaces and $breakpoints
+	@include site-space();
+}

@@ -1,0 +1,16 @@
+// Grid number function
+// Column spread number based on total columns
+
+@function grid-number(
+	$number,
+	$breakpoint: false,
+	$total: map-get($grid-cols, default)
+) {
+	@if $breakpoint and map-has-key($grid-cols, $breakpoint) {
+		$total: map-get($grid-cols, $breakpoint);
+	}
+
+	$grid-number: floor($total / $number);
+
+	@return $grid-number;
+}
