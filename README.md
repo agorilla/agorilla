@@ -17,11 +17,11 @@ My personal website
 - improved dist workflow
 - HTML minify
 - Grid
+- Name and title
 
 ## Open
 
 - SVG profile image
-- Name and title
 - Tools I use
 - Current work
 - Side projects
