@@ -4,6 +4,8 @@ My personal website
 
 ## Currently in development
 
+- Name and title
+
 ## Done
 
 - Grunt config
@@ -19,7 +21,6 @@ My personal website
 ## Open
 
 - SVG profile image
-- Name and title
 - Tools I use
 - Current work
 - Side projects
