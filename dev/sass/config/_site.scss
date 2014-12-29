@@ -4,17 +4,18 @@
 $siteMaxWidth: 1280px;
 $siteMinWidth: 320px;
 
-// Large site (desktop, default)
-$siteLargeBreakpoint: $siteMaxWidth;
-$siteLargeSpaceOuter: 68px;
-$siteLargeSpaceInner: 30px;
+// Horizontal site space
+$siteSpaces: (
+	small: 15px,
+	medium: 30px,
+	large: 40px,
+	xlarge: 50px
+);
 
-// Medium site (medium)
-$siteMediumBreakpoint: 800px;
-$siteMediumSpaceOuter: 50px;
-$siteMediumSpaceInner: 20px;
-
-// Small site (mobile
-$siteSmallBreakpoint: 420px;
-$siteSmallSpaceOuter: 0;
-$siteSmallSpaceInner: 20px;
+// Responsive site breakpoints
+$siteBreakpoints: (
+	small: 420px,
+	medium: 600px,
+	large: 800px,
+	xlarge: 1000px
+);

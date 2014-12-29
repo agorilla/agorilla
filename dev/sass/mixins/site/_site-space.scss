@@ -1,0 +1,10 @@
+// Horizontal site space mixin
+
+@mixin site-space($spaces: $siteSpaces, $breakpoints: $siteBreakpoints) {
+	@each $space, $size in $spaces {
+		@include breakpoint($space) {
+			padding-left: $size;
+			padding-right: $size;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+// Grid styles mixin
+
+@mixin grid-styles(
+	$number,
+	$gutter,
+	$total: map-get($grid-cols, default)
+) {
+	// Grid container
+	.grid {
+		// Space for last column
+		margin-right: -#{$gutter};
+	}
+
+	// Grid column
+	.grid_col {
+		// Column width
+		width: grid-width($number, $total);
+
+		// Column gutter
+		padding-right: $gutter;
+	}
+}

@@ -1,0 +1,9 @@
+// Grid module
+
+.mod-grid {
+	// Grid
+	@include grid(1);
+	@include grid(2, small);
+	@include grid(3, medium);
+	@include grid(4, large);
+}

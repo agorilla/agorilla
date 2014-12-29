@@ -1,0 +1,28 @@
+.icon-git {
+	background-image: url('fallback/git.png');
+	background-repeat: no-repeat;
+	width: 400px;
+	height: 300px;
+}
+
+.icon-grunt {
+	background-image: url('fallback/grunt.png');
+	background-repeat: no-repeat;
+	width: 360px;
+	height: 424px;
+}
+
+.icon-require {
+	background-image: url('fallback/require.png');
+	background-repeat: no-repeat;
+	width: 323px;
+	height: 340px;
+}
+
+.icon-sass {
+	background-image: url('fallback/sass.png');
+	background-repeat: no-repeat;
+	width: 400px;
+	height: 300px;
+}
+
