@@ -17,6 +17,7 @@ My personal website
 - improved dist workflow
 - HTML minify
 - Grid
+- Name and title
 
 ## Open
 
