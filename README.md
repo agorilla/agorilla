@@ -1,4 +1,5 @@
-agorilla
-========
+# Simon Koch (@agorilla)
 
-Website of Simon Koch
+My personal website
+
+Currently in development
