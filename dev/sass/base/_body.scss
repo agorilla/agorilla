@@ -1,6 +1,10 @@
 // Body styles
 
 body {
+	// Base font
+	font-family: $fontFamily;
+	font-size: $fontSizeNormal;
+
 	// Base text color
 	color: $colorWhite;
 
