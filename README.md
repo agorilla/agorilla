@@ -4,7 +4,7 @@ My personal website
 
 ## Currently in development
 
-- Name and title
+- HTML code library improvements
 
 ## Done
 
