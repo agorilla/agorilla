@@ -223,6 +223,12 @@ module.exports = function (grunt) {
 
 		// Process HTML
 		processhtml: {
+			dev: {
+				files: {
+					'dev/index.html': ['dev/html/index.html']
+				}
+			},
+
 			dist: {
 				files: {
 					'dist/index.html': ['dist/index.html']
@@ -272,6 +278,15 @@ module.exports = function (grunt) {
 					atBegin: true
 				}
 			},
+			html: {
+				files: [
+					'dev/html/**/*.html'
+				],
+				tasks: ['dev-html'],
+				options: {
+					atBegin: true
+				}
+			},
 			icons: {
 				files: [
 					'dev/img/icons/input/*.svg',
@@ -284,11 +299,6 @@ module.exports = function (grunt) {
 					'dev/img/*.svg'
 				],
 				tasks: ['svg']
-			},
-			html: {
-				files: [
-					'dev/*.html'
-				]
 			}
 		}
 	});
@@ -302,11 +312,14 @@ module.exports = function (grunt) {
 	// JavaScript dev task
 	grunt.registerTask('dev-js', ['concat', 'jshint']);
 
+	// HTML dev task
+	grunt.registerTask('dev-html', ['processhtml:dev']);
+
 	// Copy dist task
 	grunt.registerTask('dist-copy', ['clean:dist', 'copy:dist']);
 
-	// Minify dist task
-	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'processhtml', 'htmlmin']);
+	// Modify dist task
+	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'processhtml:dist', 'htmlmin']);
 
 	// Icon generation task
 	grunt.registerTask('icon', ['clean:icons', 'grunticon', 'copy:icons']);
@@ -318,5 +331,5 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', ['dev-sass', 'dev-js', 'dist-copy', 'dist-modify']);
 
 	// Default task
-	grunt.registerTask('default', ['dev-sass', 'dev-js', 'icon', 'svg']);
+	grunt.registerTask('default', ['dev-sass', 'dev-js', 'dev-html', 'icon', 'svg']);
 };
