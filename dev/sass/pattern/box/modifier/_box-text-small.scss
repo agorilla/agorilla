@@ -1,0 +1,14 @@
+// Small text box pattern
+// modifier of box-text
+
+.box-text-small {
+	// Smaller padding
+	padding: 5px 20px;
+
+	// Smaller font size
+	font-size: $fontSizeLarge - 3px;
+
+	@include breakpoint(small) {
+		font-size: $fontSizeLarge;
+	}
+}

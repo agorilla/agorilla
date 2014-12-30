@@ -1,0 +1,20 @@
+// Text box pattern
+
+.box-text {
+	display: inline-block;
+	padding: 5px 30px;
+
+	// Font styles
+	font-size: $fontSizeXlarge - 5px;
+	font-weight: bold;
+
+	// Lowercase letters
+	text-transform: lowercase;
+
+	// Black background
+	background-color: $colorBlack;
+
+	@include breakpoint(small) {
+		font-size: $fontSizeXlarge;
+	}
+}
