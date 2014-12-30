@@ -221,6 +221,15 @@ module.exports = function (grunt) {
 			}
 		},
 
+		// Process HTML
+		processhtml: {
+			dist: {
+				files: {
+					'dist/index.html': ['dist/index.html']
+				}
+			}
+		},
+
 		// HTML miniy
 		htmlmin: {
 			options: {
@@ -297,7 +306,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('dist-copy', ['clean:dist', 'copy:dist']);
 
 	// Minify dist task
-	grunt.registerTask('dist-minify', ['cssmin', 'uglify', 'htmlmin']);
+	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'processhtml', 'htmlmin']);
 
 	// Icon generation task
 	grunt.registerTask('icon', ['clean:icons', 'grunticon', 'copy:icons']);
@@ -306,7 +315,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('svg', ['svgmin']);
 
 	// Build task
-	grunt.registerTask('build', ['dev-sass', 'dev-js', 'dist-copy', 'dist-minify']);
+	grunt.registerTask('build', ['dev-sass', 'dev-js', 'dist-copy', 'dist-modify']);
 
 	// Default task
 	grunt.registerTask('default', ['dev-sass', 'dev-js', 'icon', 'svg']);
