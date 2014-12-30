@@ -24,7 +24,8 @@ node_modules
 # PhpStorm Project files
 .idea
 
-# Grunt generated dev CSS and JS files
+# Grunt generated dev files
 dev/css/*.css
 dev/sass/import
 dev/js/*.js
+dev/*.html

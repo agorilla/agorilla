@@ -13,7 +13,7 @@
 	<!-- Head JavaScript -->
 	<script src="js/head.js" type="text/javascript"></script>
 
-	<!-- SVG icon no JavaScript fallback -->
+	<!-- SVG icon fallback -->
 	<noscript>
 		<link href="css/icons/icons.fallback.css" rel="stylesheet">
 	</noscript>
@@ -21,20 +21,17 @@
 
 <body>
 <div class="site">
-	<section class="mod-title">
-		<h1 class="mod-title_name">
-			<span class="box-text">Simon Koch</span>
-		</h1>
-		<h2 class="mod-title_job">
-			<span class="box-text box-text-small box-text-inverse">Frontend architect</span>
-		</h2>
-	</section>
+	<!-- build:include:dev modules/title.html -->
+		Title module
+	<!-- /build -->
 </div>
 
 <!-- Main JavaScript -->
 <script src="js/main.js" type="text/javascript"></script>
 
-<!-- Live reload plugin // not for production -->
+<!-- build:remove:dist -->
+<!-- Live reload plugin -->
 <script src="//localhost:35729/livereload.js"></script>
+<!-- /build -->
 </body>
 </html>
