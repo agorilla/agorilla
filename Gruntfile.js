@@ -228,6 +228,11 @@ module.exports = function (grunt) {
 					'dev/index.html': ['dev/html/index.html']
 				}
 			},
+			dev_modify: {
+				files: {
+					'dev/index.html': ['dev/index.html']
+				}
+			},
 
 			dist: {
 				files: {
@@ -313,7 +318,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('dev-js', ['concat', 'jshint']);
 
 	// HTML dev task
-	grunt.registerTask('dev-html', ['processhtml:dev']);
+	grunt.registerTask('dev-html', ['processhtml:dev', 'processhtml:dev_modify']);
 
 	// Copy dist task
 	grunt.registerTask('dist-copy', ['clean:dist', 'copy:dist']);
