@@ -241,6 +241,23 @@ module.exports = function (grunt) {
 			}
 		},
 
+		// Replace content
+		replace: {
+			dev: {
+				options: {
+					patterns: [
+						{
+							match: /..\/(css|js)/g,
+							replacement: '$1'
+						}
+					]
+				},
+				files: [
+					{expand: true, flatten: true, src: ['dev/*.html'], dest: 'dev/'}
+				]
+			}
+		},
+
 		// HTML miniy
 		htmlmin: {
 			options: {
@@ -318,7 +335,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('dev-js', ['concat', 'jshint']);
 
 	// HTML dev task
-	grunt.registerTask('dev-html', ['processhtml:dev', 'processhtml:dev_modify']);
+	grunt.registerTask('dev-html', ['processhtml:dev', 'processhtml:dev_modify', 'replace:dev']);
 
 	// Copy dist task
 	grunt.registerTask('dist-copy', ['clean:dist', 'copy:dist']);
