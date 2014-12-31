@@ -255,6 +255,21 @@ module.exports = function (grunt) {
 				files: [
 					{expand: true, flatten: true, src: ['dev/*.html'], dest: 'dev/'}
 				]
+			},
+
+			dist: {
+				options: {
+					patterns: [
+						{
+							match: '/dev/',
+							replacement: '/dist/'
+						}
+					],
+					usePrefix: false
+				},
+				files: [
+					{expand: true, flatten: true, src: ['dist/js/*.js'], dest: 'dist/js/'}
+				]
 			}
 		},
 
@@ -341,7 +356,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('dist-copy', ['clean:dist', 'copy:dist']);
 
 	// Modify dist task
-	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'processhtml:dist', 'htmlmin']);
+	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'replace:dist', 'processhtml:dist', 'htmlmin']);
 
 	// Icon generation task
 	grunt.registerTask('icon', ['clean:icons', 'grunticon', 'copy:icons']);
