@@ -390,5 +390,5 @@ module.exports = function (grunt) {
 	grunt.registerTask('deploy', ['shell:deploy']);
 
 	// Default task
-	grunt.registerTask('default', ['dev-sass', 'dev-js', 'dev-html', 'icon', 'svg']);
+	grunt.registerTask('default', ['dev', 'icon', 'svg']);
 };
