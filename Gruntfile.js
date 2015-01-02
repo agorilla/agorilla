@@ -365,11 +365,17 @@ module.exports = function (grunt) {
 	// HTML dev task
 	grunt.registerTask('dev-html', ['processhtml:dev', 'processhtml:dev_modify', 'replace:dev']);
 
+	// Combined dev task
+	grunt.registerTask('dev', ['dev-sass', 'dev-js', 'dev-html']);
+
 	// Copy dist task
 	grunt.registerTask('dist-copy', ['clean:dist', 'copy:dist']);
 
 	// Modify dist task
 	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'replace:dist', 'processhtml:dist', 'htmlmin']);
+
+	// Combined dist task
+	grunt.registerTask('dist', ['dist-copy', 'dist-modify']);
 
 	// Icon generation task
 	grunt.registerTask('icon', ['clean:icons', 'grunticon', 'copy:icons']);
@@ -378,7 +384,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('svg', ['svgmin']);
 
 	// Build task
-	grunt.registerTask('build', ['dev-sass', 'dev-js', 'dist-copy', 'dist-modify']);
+	grunt.registerTask('build', ['dev', 'dist']);
 
 	// Deploy task
 	grunt.registerTask('deploy', ['shell:deploy']);
