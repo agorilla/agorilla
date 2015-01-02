@@ -17,6 +17,7 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-grunticon": "latest",
+    "grunt-imageoptim": "^1.4.1",
     "grunt-processhtml": "^0.3.3",
     "grunt-replace": "^0.8.0",
     "grunt-sass": "latest",
