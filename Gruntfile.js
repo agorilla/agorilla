@@ -85,7 +85,6 @@ module.exports = function (grunt) {
 		// Concatenate JS files
 		// https://github.com/gruntjs/grunt-contrib-concat
 		concat: {
-
 			// JS that needs to be loaded in <head>
 			head: {
 				files: [
@@ -125,9 +124,10 @@ module.exports = function (grunt) {
 				files: [
 					{expand: true, cwd: 'dev/css/', src: '**', dest: 'dist/css/'},
 					{expand: true, cwd: 'dev/js/', src: '*.js', dest: 'dist/js/'},
-					{expand: true, cwd: 'dev/img/', src: '*', dest: 'dist/img/'},
+					{expand: true, cwd: 'dev/img/', src: '*.*', dest: 'dist/img/'},
+					{expand: true, cwd: 'dev/img/meta/', src: 'apple-touch-icon.png', dest: 'dist/img/meta/'},
 					{expand: true, cwd: 'dev', src: '*.*', dest: 'dist/'},
-					{expand: true, cwd: 'dev', src: 'CNAME', dest: 'dist/'},
+					{expand: true, cwd: 'dev', src: 'CNAME', dest: 'dist/'}
 				]
 			}
 		},
@@ -204,6 +204,13 @@ module.exports = function (grunt) {
 						ext: '.svg'
 					}
 				]
+			}
+		},
+
+		// Lossless image optimization
+		imageoptim: {
+			dist: {
+				src: ['dist/img']
 			}
 		},
 
@@ -372,7 +379,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('dist-copy', ['clean:dist', 'copy:dist']);
 
 	// Modify dist task
-	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'replace:dist', 'processhtml:dist', 'htmlmin']);
+	grunt.registerTask('dist-modify', ['cssmin', 'uglify', 'imageoptim:dist', 'replace:dist', 'processhtml:dist', 'htmlmin']);
 
 	// Combined dist task
 	grunt.registerTask('dist', ['dist-copy', 'dist-modify']);
