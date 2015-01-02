@@ -4,8 +4,6 @@ My personal website
 
 ## Currently in development
 
-- Production deployment
-
 ## Done
 
 - Grunt config
@@ -19,6 +17,8 @@ My personal website
 - Grid
 - Name and title
 - HTML code library improvements
+- Production deployment
+- Meta information
 
 ## Open
 
