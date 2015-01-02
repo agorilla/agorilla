@@ -262,7 +262,7 @@ module.exports = function (grunt) {
 					patterns: [
 						{
 							match: '/dev/',
-							replacement: '/dist/'
+							replacement: '/'
 						}
 					],
 					usePrefix: false
@@ -287,6 +287,19 @@ module.exports = function (grunt) {
 					src: '*.html',
 					dest: 'dist/'
 				}]
+			}
+		},
+
+		// Run shell commands
+		shell: {
+			options: {
+				stderr: false
+			},
+
+			// Deploys distribution folder to Github Pages branch
+			// https://gist.github.com/cobyism/4730490
+			deploy: {
+				command: 'git subtree push --prefix dist origin gh-pages'
 			}
 		},
 
@@ -366,6 +379,9 @@ module.exports = function (grunt) {
 
 	// Build task
 	grunt.registerTask('build', ['dev-sass', 'dev-js', 'dist-copy', 'dist-modify']);
+
+	// Deploy task
+	grunt.registerTask('deploy', ['shell:deploy']);
 
 	// Default task
 	grunt.registerTask('default', ['dev-sass', 'dev-js', 'dev-html', 'icon', 'svg']);
