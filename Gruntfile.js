@@ -126,7 +126,7 @@ module.exports = function (grunt) {
 					{expand: true, cwd: 'dev/css/', src: '**', dest: 'dist/css/'},
 					{expand: true, cwd: 'dev/js/', src: '*.js', dest: 'dist/js/'},
 					{expand: true, cwd: 'dev/img/', src: '*', dest: 'dist/img/'},
-					{expand: true, cwd: 'dev', src: '*.html', dest: 'dist/'},
+					{expand: true, cwd: 'dev', src: '*.*', dest: 'dist/'},
 					{expand: true, cwd: 'dev', src: 'CNAME', dest: 'dist/'},
 				]
 			}
@@ -247,8 +247,8 @@ module.exports = function (grunt) {
 				options: {
 					patterns: [
 						{
-							match: /..\/(css|js)/g,
-							replacement: '$1'
+							match: /\..\//g,
+							replacement: ''
 						}
 					]
 				},
