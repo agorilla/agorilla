@@ -4,7 +4,7 @@ My personal website
 
 ## Currently in development
 
-- HTML code library improvements
+- Production deployment
 
 ## Done
 
@@ -18,6 +18,7 @@ My personal website
 - HTML minify
 - Grid
 - Name and title
+- HTML code library improvements
 
 ## Open
 
