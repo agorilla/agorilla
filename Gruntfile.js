@@ -232,18 +232,21 @@ module.exports = function (grunt) {
 		processhtml: {
 			dev: {
 				files: {
-					'dev/index.html': ['dev/html/index.html']
+					'dev/index.html': ['dev/html/index.html'],
+					'dev/pattern.html': ['dev/html/pattern.html']
 				}
 			},
 			dev_modify: {
 				files: {
-					'dev/index.html': ['dev/index.html']
+					'dev/index.html': ['dev/index.html'],
+					'dev/pattern.html': ['dev/pattern.html']
 				}
 			},
 
 			dist: {
 				files: {
-					'dist/index.html': ['dist/index.html']
+					'dist/index.html': ['dist/index.html'],
+					'dist/pattern.html': ['dist/pattern.html']
 				}
 			}
 		},
