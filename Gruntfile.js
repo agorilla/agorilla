@@ -116,7 +116,7 @@ module.exports = function (grunt) {
 			icons: {
 				files: [
 					{expand: true, cwd: 'dev/img/icons/output', src: '*.css', dest: 'dev/css/icons'},
-					{expand: true, cwd: 'dev/img/icons/output/fallback', src: '**', dest: 'dev/css/icons/fallback'},
+					{expand: true, cwd: 'dev/img/icons/output/fallback', src: '**', dest: 'dev/css/icons/fallback'}
 				]
 			},
 
