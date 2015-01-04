@@ -1,6 +1,9 @@
 // Grid pattern
 
 .grid {
-	// Reset  column float
+	// Reset column float
 	@extend .clearfix;
+
+	// Grid gutter compensation for last column
+	@include grid-gutter(grid);
 }

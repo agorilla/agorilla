@@ -1,0 +1,25 @@
+// Flexible grid width module
+
+.mod-grid-flexible {
+	// First column
+	.grid_col-1 {
+		@include grid-width(12);
+		@include grid-width(7, small);
+		@include grid-width(8, medium);
+		@include grid-width(9, large);
+
+		// Space underneath column
+		margin-bottom: 20px;
+	}
+
+	// Second column
+	.grid_col-2 {
+		@include grid-width(8);
+		@include grid-width(5, small);
+		@include grid-width(4, medium);
+		@include grid-width(3, large);
+
+		// Space underneath column
+		margin-bottom: 20px;
+	}
+}

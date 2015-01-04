@@ -1,8 +1,26 @@
 <!-- build:remove --><link href="../../css/main.css" rel="stylesheet"><!-- /build -->
 
-<div class="grid mod-grid">
-	<div class="grid_col"><div style="background: green">Col 1</div></div>
-	<div class="grid_col"><div style="background: green">Col 2</div></div>
-	<div class="grid_col"><div style="background: green">Col 3</div></div>
-	<div class="grid_col"><div style="background: green">Col 4</div></div>
+<h2>Grid</h2>
+
+<p>The column width is defined by the module the grid is used within</p>
+<p>In this examples there is a grid module used  to visualize the grid</p>
+
+<h3>Equal column width</h3>
+
+<div class=" mod-grid-equal">
+	<div class="grid">
+		<div class="grid_col"><div style="background: green">Col 1</div></div>
+		<div class="grid_col"><div style="background: green">Col 2</div></div>
+		<div class="grid_col"><div style="background: green">Col 3</div></div>
+		<div class="grid_col"><div style="background: green">Col 4</div></div>
+	</div>
+</div>
+
+<h3>Flexible column width</h3>
+
+<div class="mod-grid-flexible">
+	<div class="grid">
+		<div class="grid_col grid_col-1"><div style="background: green">Col 1</div></div>
+		<div class="grid_col grid_col-2"><div style="background: green">Col 2</div></div>
+	</div>
 </div>

@@ -1,0 +1,25 @@
+// Grid gutter mixin
+
+@mixin grid-gutter(
+	$selector // Gutter selector (grid or column)
+) {
+	@each $breakpoint, $gutter in $grid-gutters {
+		// If default breakpoint no media query is needed
+		@if $breakpoint == default {
+			@if $selector == grid {
+				margin-right: -#{$gutter};
+			} @else {
+				padding-right: $gutter;
+			}
+		} @else {
+			// Otherwise use media query
+			@include breakpoint($breakpoint) {
+				@if $selector == grid {
+					margin-right: -#{$gutter};
+				} @else {
+					padding-right: $gutter;
+				}
+			}
+		}
+	}
+}

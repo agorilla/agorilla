@@ -1,0 +1,14 @@
+// Equal grid width module
+
+.mod-grid-equal {
+	// Grid column
+	.grid_col {
+		@include grid-width(12);
+		@include grid-width(6, small);
+		@include grid-width(4, medium);
+		@include grid-width(3, large);
+
+		// Space underneath column
+		margin-bottom: 20px;
+	}
+}

@@ -1,0 +1,17 @@
+// Grid column width mixin
+
+@mixin grid-width(
+	$cols, // Number of columns the column is wide (example: 12)
+	$breakpoint: false, // Grid breakpoint (example: small, default: none)
+	$total: map-get($grid-cols, default)
+) {
+	// If breakpoint use media query for column width
+	@if $breakpoint {
+		@include breakpoint($breakpoint) {
+			width: grid-width($cols, $total);
+		}
+	} @else {
+		// Otherwise column width without breakpoint
+		width: grid-width($cols, $total);
+	}
+}

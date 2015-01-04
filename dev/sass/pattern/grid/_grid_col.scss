@@ -1,6 +1,13 @@
 // Grid column pattern
 
 .grid_col {
+	// Column float
 	float: left;
+
+	// Column width includes gutter padding
 	box-sizing: border-box;
+
+	// Grid column gutter
+	// based on grid breakpoints
+	@include grid-gutter(column);
 }
